@@ -1,0 +1,27 @@
+{
+  "name": "wptailwind3x",
+  "version": "1.0.0",
+  "description": "> Includes GitHub CI/CD .yaml files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creed1120/wptailwind3x.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/creed1120/wptailwind3x/issues"
+  },
+  "homepage": "https://github.com/creed1120/wptailwind3x#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "laravel-mix": "^6.0.43",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.24"
+  }
+}
