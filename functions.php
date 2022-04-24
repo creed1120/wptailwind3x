@@ -6,6 +6,17 @@
  * @since wptailwind3x 1.0
  */
  
+// Enqueue Styles and Scripts
+function wptailwind3x_add_styles() {
+    // wp_enqueue_style( 'tailwindwp_css', get_stylesheet_uri() );
+    wp_enqueue_style( 'wptailwind3x_css', get_template_directory_uri() . '/dist/css/app.css', array(), 1.0 );
+
+    wp_enqueue_script( 'wptailwind3x_js', get_template_directory_uri() . '/dist/js/app.js', NULL, 1.0, true );
+}
+
+add_action( 'wp_enqueue_scripts', 'wptailwind3x_add_styles');
+
+
 /**
  * First, let's set the maximum content width based on the theme's design and stylesheet.
  * This will limit the width of all uploaded images and embeds.
