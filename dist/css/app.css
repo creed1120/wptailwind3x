@@ -933,41 +933,44 @@ select {
   margin-bottom: 0;
 }
 .prose-slate {
-  --tw-prose-body: #334155;
-  --tw-prose-headings: #0f172a;
-  --tw-prose-lead: #475569;
-  --tw-prose-links: #0f172a;
-  --tw-prose-bold: #0f172a;
-  --tw-prose-counters: #64748b;
-  --tw-prose-bullets: #cbd5e1;
-  --tw-prose-hr: #e2e8f0;
-  --tw-prose-quotes: #0f172a;
-  --tw-prose-quote-borders: #e2e8f0;
-  --tw-prose-captions: #64748b;
-  --tw-prose-code: #0f172a;
-  --tw-prose-pre-code: #e2e8f0;
+  --tw-prose-body: #1e293b;
+  --tw-prose-headings: #1e293b;
+  --tw-prose-lead: #1e293b;
+  --tw-prose-links: #1e293b;
+  --tw-prose-bold: #1e293b;
+  --tw-prose-counters: #1e293b;
+  --tw-prose-bullets: #1e293b;
+  --tw-prose-hr: #1e293b;
+  --tw-prose-quotes: #1e293b;
+  --tw-prose-quote-borders: #1e293b;
+  --tw-prose-captions: #1e293b;
+  --tw-prose-code: #1e293b;
+  --tw-prose-pre-code: #1e293b;
   --tw-prose-pre-bg: #1e293b;
-  --tw-prose-th-borders: #cbd5e1;
-  --tw-prose-td-borders: #e2e8f0;
-  --tw-prose-invert-body: #cbd5e1;
-  --tw-prose-invert-headings: #fff;
-  --tw-prose-invert-lead: #94a3b8;
+  --tw-prose-th-borders: #1e293b;
+  --tw-prose-td-borders: #1e293b;
+  --tw-prose-invert-body: #f1f5f9;
+  --tw-prose-invert-headings: #f1f5f9;
+  --tw-prose-invert-lead: #f1f5f9;
   --tw-prose-invert-links: #fff;
   --tw-prose-invert-bold: #fff;
-  --tw-prose-invert-counters: #94a3b8;
-  --tw-prose-invert-bullets: #475569;
-  --tw-prose-invert-hr: #334155;
-  --tw-prose-invert-quotes: #f1f5f9;
-  --tw-prose-invert-quote-borders: #334155;
-  --tw-prose-invert-captions: #94a3b8;
+  --tw-prose-invert-counters: #f472b6;
+  --tw-prose-invert-bullets: #db2777;
+  --tw-prose-invert-hr: #be185d;
+  --tw-prose-invert-quotes: #fce7f3;
+  --tw-prose-invert-quote-borders: #be185d;
+  --tw-prose-invert-captions: #f472b6;
   --tw-prose-invert-code: #fff;
-  --tw-prose-invert-pre-code: #cbd5e1;
+  --tw-prose-invert-pre-code: #f9a8d4;
   --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
-  --tw-prose-invert-th-borders: #475569;
-  --tw-prose-invert-td-borders: #334155;
+  --tw-prose-invert-th-borders: #db2777;
+  --tw-prose-invert-td-borders: #be185d;
 }
 .mt-1 {
   margin-top: 0.25rem;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .mt-2 {
   margin-top: 0.5rem;
@@ -990,8 +993,8 @@ select {
 .w-full {
   width: 100%;
 }
-.w-96 {
-  width: 24rem;
+.max-w-full {
+  max-width: 100%;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -1015,6 +1018,10 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
 .bg-slate-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
@@ -1027,17 +1034,21 @@ select {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .font-extrabold {
   font-weight: 800;
@@ -1074,11 +1085,29 @@ select {
 .focus\:ring-offset-0:focus {
   --tw-ring-offset-width: 0px;
 }
-@media (min-width: 640px) {
+@media (prefers-color-scheme: dark) {
 
-  .sm\:w-96 {
-    width: 24rem;
+  .dark\:bg-slate-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
   }
+
+  .dark\:bg-purple-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(126 34 206 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-slate-100 {
+    --tw-text-opacity: 1;
+    color: rgb(241 245 249 / var(--tw-text-opacity));
+  }
+}
+@media (min-width: 640px) {
 
   .sm\:px-0 {
     padding-left: 0px;
@@ -1131,8 +1160,8 @@ select {
     margin-right: auto;
   }
 
-  .md\:w-96 {
-    width: 24rem;
+  .md\:w-1\/2 {
+    width: 50%;
   }
 }
 @media (min-width: 1024px) {
@@ -1345,10 +1374,6 @@ select {
 
   .lg\:prose-xl > :where(:last-child):not(:where([class~="not-prose"] *)) {
     margin-bottom: 0;
-  }
-
-  .lg\:w-96 {
-    width: 24rem;
   }
 }
 @media (min-width: 1280px) {

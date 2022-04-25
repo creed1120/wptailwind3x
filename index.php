@@ -9,20 +9,26 @@
 
  get_header(); ?>
 
-<div class="md:container md:mx-auto px-4 sm:px-0">
+<div class="md:container md:mx-auto px-4 sm:px-0 w-full">
 
     <h1 class="text-4xl font-extrabold py-6">Wordpress TailwindCSS v3.x Project</h1>
 
-    <article class="prose lg:prose-xl prose-slate">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, esse accusantium. Saepe culpa eaque perferendis incidunt quis enim cumque ex nostrum nihil, ea porro inventore expedita explicabo a placeat eveniet?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, esse accusantium. Saepe culpa eaque perferendis incidunt quis enim cumque ex nostrum nihil, ea porro inventore expedita explicabo a placeat eveniet?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, esse accusantium. Saepe culpa eaque perferendis incidunt quis enim cumque ex nostrum nihil, ea porro inventore expedita explicabo a placeat eveniet?</p>
+    <article class="max-w-full">
+        
+        <?php if(have_posts()) : while(have_posts()) : the_post() ?>
+
+            <h2 class="text-2xl"><?php echo the_title(); ?></h2>
+            <p><?php echo the_content(); ?></p>
+
+        <?php endwhile; ?>
+        <?php endif; ?>
+
     </article>
 
-    <div class="grid grid-cols-1 gap-6 xl:w-96 py-8">
+    <!-- <div class="grid grid-cols-1 gap-6 xl:w-96 py-8">
         <form action="/">
         <label class="block">
-        <span class="text-gray-700">Full name</span>
+        <span class="text-gray-700 dark:text-white">Full name</span>
         <input type="text" class="
             mt-1
             block
@@ -33,8 +39,8 @@
             focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
             " placeholder="">
         </label>
-        <label class="block">
-        <span class="text-gray-700">Email address</span>
+        <label class="block mt-4">
+        <span class="text-gray-700 dark:text-white">Email address</span>
         <input type="email" class="
             mt-1
             block
@@ -45,8 +51,8 @@
             focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
             " placeholder="john@example.com">
         </label>
-        <label class="block">
-        <span class="text-gray-700">When is your event?</span>
+        <label class="block mt-4">
+        <span class="text-gray-700 dark:text-white">When is your event?</span>
         <input type="date" class="
             mt-1
             block
@@ -57,8 +63,8 @@
             focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
             ">
         </label>
-        <label class="block">
-        <span class="text-gray-700">What type of event is it?</span>
+        <label class="block mt-4">
+        <span class="text-gray-700 dark:text-white">What type of event is it?</span>
         <select class="
             block
             w-full
@@ -74,8 +80,8 @@
             <option>Other</option>
         </select>
         </label>
-        <label class="block">
-        <span class="text-gray-700">Additional details</span>
+        <label class="block mt-4">
+        <span class="text-gray-700 dark:text-white">Additional details</span>
         <textarea class="
             mt-1
             block
@@ -110,16 +116,19 @@
         <div class="mt-6">
         <input type="submit" class=" 
           bg-slate-600
+            dark:bg-purple-700
+            dark:text-slate-100
             mt-1
             block
             w-full
             rounded-md
             py-3
             cursor-pointer
+            md:w-1/2
             ">
         </div>
         </form>
-    </div>
+    </div> -->
 
 </div>
 
